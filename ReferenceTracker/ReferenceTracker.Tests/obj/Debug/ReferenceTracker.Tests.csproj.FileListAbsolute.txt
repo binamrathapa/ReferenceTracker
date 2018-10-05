@@ -1,0 +1,8 @@
+D:\Binod Document\Soft\ReferenceTracker\ReferenceTracker.Tests\bin\Debug\ReferenceTracker.Tests.dll
+D:\Binod Document\Soft\ReferenceTracker\ReferenceTracker.Tests\bin\Debug\ReferenceTracker.Tests.pdb
+D:\Binod Document\Soft\ReferenceTracker\ReferenceTracker.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Binod Document\Soft\ReferenceTracker\ReferenceTracker.Tests\bin\Debug\ReferenceTracker.exe
+D:\Binod Document\Soft\ReferenceTracker\ReferenceTracker.Tests\bin\Debug\ReferenceTracker.pdb
+D:\Binod Document\Soft\ReferenceTracker\ReferenceTracker.Tests\obj\Debug\ReferenceTracker.Tests.csprojResolveAssemblyReference.cache
+D:\Binod Document\Soft\ReferenceTracker\ReferenceTracker.Tests\obj\Debug\ReferenceTracker.Tests.dll
+D:\Binod Document\Soft\ReferenceTracker\ReferenceTracker.Tests\obj\Debug\ReferenceTracker.Tests.pdb
