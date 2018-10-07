@@ -24,15 +24,28 @@ namespace ReferenceTracker
                 /*string query = "insert into [user] values('"+txtUserName.Text+"','"+txtPassword.Text+"','"+txtEmail.Text+"','"+txtFirstName.Text+"','"+txtLastName+"')";
                 DBConnection db = new DBConnection(query);               
                 db.ExecuteQuery();*/
-                UserService us = new UserService();
-                User user = new User();
-                user.UserName = txtUserName.Text;
-                user.Password = txtPassword.Text;
-                user.Email = txtEmail.Text;
-                user.FirstName = txtFirstName.Text;
-                user.LastName = txtLastName.Text;
-                us.SaveUser(user);
-                MessageBox.Show("User registered successfully");
+                Helper h = new Helper();
+                if (h.CheckEmail(txtEmail.Text))
+                {
+                    if (h.CheckPasswords(txtPassword.Text, txtConfirmPassword.Text))
+                    {
+                        UserService us = new UserService();
+                        User user = new User();
+                        user.UserName = txtUserName.Text;
+                        user.Password = txtPassword.Text;
+                        user.Email = txtEmail.Text;
+                        user.FirstName = txtFirstName.Text;
+                        user.LastName = txtLastName.Text;
+                        us.SaveUser(user);
+                        MessageBox.Show("User registered successfully");
+                    }
+                    else
+                        MessageBox.Show("Passwords donot match");
+                }
+                else
+                {
+                    MessageBox.Show("Email is invalid");
+                }
             }
             catch(Exception ex)
             {

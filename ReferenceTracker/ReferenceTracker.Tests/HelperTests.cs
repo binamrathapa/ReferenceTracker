@@ -13,5 +13,11 @@ namespace ReferenceTracker.Tests
             Helper h = new Helper();
             Assert.AreEqual(true, h.CheckEmail("binod@test.com"));
         }
+        [TestMethod]
+        public void CheckPasswords_ReturnTrue()
+        {
+            Helper h = new Helper();
+            Assert.AreEqual(true, h.CheckPasswords("password","password"));
+        }
     }
 }

@@ -15,5 +15,12 @@ namespace ReferenceTracker
             else
                 return false;
         }
+        public bool CheckPasswords(string password,string confirmPassword)
+        {
+            if (password.Equals(confirmPassword))
+                return true;
+            else
+                return false;
+        }
     }
 }

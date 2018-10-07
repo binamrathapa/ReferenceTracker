@@ -70,7 +70,7 @@ namespace ReferenceTracker
                             sw.WriteLine(citationStyle);
                         }
                         if (isSelected)
-                            MessageBox.Show("References are successfull exported into " + selectedStyle + " citation in File location: " + fd.FileName + fd.DefaultExt);
+                            MessageBox.Show("References are successfull exported into " + selectedStyle + " citation in File location: " + fd.FileName +"."+ fd.DefaultExt);
                         else
                             MessageBox.Show("There is no reference selected");
                     }
@@ -96,31 +96,34 @@ namespace ReferenceTracker
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             int id =Convert.ToInt32( dataGridView1.Rows[e.RowIndex].Cells["Id"].Value);
-            string command = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
-            if (command.ToLower() == "delete")
+            if (dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
             {
-                try
+                string command = dataGridView1.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString();
+                if (command.ToLower() == "delete")
                 {
-                    if (MessageBox.Show("Are you sure to Delete", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    try
                     {
-                        string query = "delete from Reference where id=" + id; ;
-                        DBConnection db = new DBConnection(query);
-                        db.ExecuteQuery();
-                        MessageBox.Show("Reference Successfully deleted");
-                        LoadReferences();
-                    }
-                    
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
+                        if (MessageBox.Show("Are you sure to Delete", "Message", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                        {
+                            string query = "delete from Reference where id=" + id; ;
+                            DBConnection db = new DBConnection(query);
+                            db.ExecuteQuery();
+                            MessageBox.Show("Reference Successfully deleted");
+                            LoadReferences();
+                        }
 
-            }
-            else if (command.ToLower() == "edit")
-            {
-                AddReference r = new AddReference(userId, id);
-                r.Show();
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
+
+                }
+                else if (command.ToLower() == "edit")
+                {
+                    AddReference r = new AddReference(userId, id);
+                    r.Show();
+                }
             }
         }
     }

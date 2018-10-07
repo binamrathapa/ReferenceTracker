@@ -32,7 +32,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtEmail = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -75,12 +75,12 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Password";
             // 
-            // textBox1
+            // txtConfirmPassword
             // 
-            this.textBox1.Location = new System.Drawing.Point(160, 224);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 9;
+            this.txtConfirmPassword.Location = new System.Drawing.Point(160, 224);
+            this.txtConfirmPassword.Name = "txtConfirmPassword";
+            this.txtConfirmPassword.Size = new System.Drawing.Size(119, 20);
+            this.txtConfirmPassword.TabIndex = 9;
             // 
             // label5
             // 
@@ -157,7 +157,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label4);
@@ -182,7 +182,7 @@
         private System.Windows.Forms.TextBox txtEmail;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtFirstName;
